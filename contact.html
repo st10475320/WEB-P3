@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Customer Care | Woolworths</title>
+  <meta name="description" content="Get in touch with Woolworths customer support team. View store location map.">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS for Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">WOOLWORTHS</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="enquiry.html">Service Enquiry</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Customer Care</h1>
+
+    <form id="contactForm" action="mailto:custserv@woolworths.co.za" method="POST" enctype="text/plain" novalidate style="margin-top: 1.5rem;">
+      <div class="form-group">
+        <label for="contactName">Name</label>
+        <input type="text" id="contactName" name="Name" required>
+        <div class="error-message" id="cNameError">Name is required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input type="email" id="contactEmail" name="Email" required>
+        <div class="error-message" id="cEmailError">Valid email required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="messageType">Message Category</label>
+        <select id="messageType" name="Category">
+          <option value="Feedback">General Feedback</option>
+          <option value="Query">Store Query</option>
+          <option value="Complaint">Service Complaint</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message Body</label>
+        <textarea id="message" name="Message" rows="5" required></textarea>
+        <div class="error-message" id="cMsgError">Please enter your message.</div>
+      </div>
+
+      <button type="submit" class="btn">Send via Email</button>
+    </form>
+
+    <h2 style="margin-top: 3rem;">Headquarters Location</h2>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Woolworths Educational Prototype.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

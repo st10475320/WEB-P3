@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service & Product Enquiry | Woolworths</title>
+  <meta name="description" content="Enquire about Woolworths corporate options, bulk orders, or sponsorship opportunities.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">WOOLWORTHS</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="enquiry.html" class="active">Service Enquiry</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Product & Services Enquiry</h1>
+    <p>Submit an enquiry regarding bulk product ordering, pricing estimates, or sponsorships[cite: 7].</p>
+
+    <form id="enquiryForm" novalidate style="margin-top: 1.5rem;">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required>
+        <div class="error-message" id="nameError">Please enter your full name.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required>
+        <div class="error-message" id="emailError">Please enter a valid email address.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="enquiryType">Enquiry Type</label>
+        <select id="enquiryType" required>
+          <option value="">-- Select Type --</option>
+          <option value="bulk">Bulk Product Purchase</option>
+          <option value="sponsorship">Sponsorship / Community Support</option>
+          <option value="corporate">Corporate Gift Cards</option>
+        </select>
+        <div class="error-message" id="typeError">Please select an enquiry category.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Estimated Quantity / Budget (ZAR)</label>
+        <input type="number" id="quantity" min="1" required>
+        <div class="error-message" id="qtyError">Please enter a valid number.</div>
+      </div>
+
+      <button type="submit" class="btn">Calculate & Submit</button>
+    </form>
+
+    <div id="enquiryResponse" class="response-box"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Woolworths Educational Prototype.</p>
+  </footer>
+
+  <script src="js/validation.js"></script>
+</body>
+</html>
